@@ -1,5 +1,6 @@
 <?php 
 
+/*ihc*/
 function conexion($bd_config){
 	try {
 		$conexion = new PDO('mysql:host=localhost;dbname='.$bd_config['basedatos'], $bd_config['usuario'], $bd_config['pass']);
@@ -9,12 +10,23 @@ function conexion($bd_config){
 	}
 }
 
+
 function limpiarDatos($datos){
 	$datos = trim($datos);
 	$datos = stripslashes($datos);
 	$datos = htmlspecialchars($datos);
 	return $datos;
 }
+
+function obtener_curso($conexion, $idUsuario){
+	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM curso inner join detalle_curso where (detalle_curso.idUsuario = 1) and (detalle_curso.idCurso = curso.idCurso)");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
+
+/*hasta aqui*/
+
 
 function pagina_actual(){
 	return isset($_GET['p']) ? (int)$_GET['p'] : 1;

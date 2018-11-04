@@ -21,7 +21,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="imagenes/logo-fisi-principal.png" class="img-circle" height="30" width="30" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="<?php echo RUTA; ?>imagenes/logo-fisi-principal.png" class="img-circle" height="30" width="30" alt=""></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -78,9 +78,9 @@
 <div class="banner">
     <ul>
         <li class="redes-sociales">Redes Sociales</li>
-        <img src="imagenes/internet.png"  style="float: right; margin-top: 35px; margin-right: -120px" alt="">
-        <img src="imagenes/facebook1.png"  style="float: right; margin-top: 35px;margin-right: -80px" alt="">
-        <li><a href="#"><img src="imagenes/logo-fisi.png" alt="logo-fisi" class="logo-fisi"></a></li>
+        <img src="<?php echo RUTA; ?>imagenes/internet.png"  style="float: right; margin-top: 35px; margin-right: -120px" alt="">
+        <img src="<?php echo RUTA; ?>imagenes/facebook1.png"  style="float: right; margin-top: 35px;margin-right: -80px" alt="">
+        <li><a href="#"><img src="<?php echo RUTA; ?>imagenes/logo-fisi.png" alt="logo-fisi" class="logo-fisi"></a></li>
     </ul>
 
 </div>

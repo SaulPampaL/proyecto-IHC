@@ -1,40 +1,8 @@
-<?php require 'views/header.view.php'; ?>
+<?php require "views/header.view.php"; ?>
 
 <div class="container text-center" style="margin-top:10px;">
     <div class=="row">
-        <div class="tamaño-menu col-sm-3 well" id="navegacion">
-            <div id="perfil">
-                <p><a href="#">Mi Perfil</a></p>
-                <img src="imagenes/martinluque.png" class="img-circle" height="100" width="120" alt="Avatar">
-            </div>
-            <div class="menu text-left">
-                <div class="scrollable">
-                    <ul class="nav-lateral ">
-                        <li ><a href="index.html" ><img src="imagenes/icon-informacion.png" class="b"> Area personal</a></li>
-                        <li ><a href="paginas/InicioSitio.html" ><img src="imagenes/icon-inicio.png" class="b">Inicio del sitio</a></li>
-                        <li class="submenu"><a href="#"><img src="imagenes/icon-catalogo.png" class="b">Paginas del sitio <span class="glyphicon glyphicon-chevron-down" id="c"></span></a>
-                            <ul>
-                                <li ><a href="paginas/BlogSitio.html" ><img src="imagenes/añadir.png" class="b">Blogs del sitio</a></li>
-                                <li ><a href="#tab4" ><img src="imagenes/ojo.png" class="b">Novedades del sitio</a></li>
-                                <li ><a href="#tab4" ><img src="imagenes/ojo.png" class="b">Calendario</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu"><a href="#"><img src="imagenes/icon-nuevo.png" class="b">Mis cursos<span class="glyphicon glyphicon-chevron-down" id="d"></span></a>
-                            <ul>
-                                <li ><a href="paginas/Ciclos.html"><img src="imagenes/añadir.png" class="b">EAP SISTEMAS 2018-2</a></li>
-                                <li ><a href="#tab6"><img src="imagenes/ojo.png" class="b">EAP SISTEMAS 2018-1</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu"><a href="#"><img src="imagenes/icon-nuevo.png" class="b">Funcionalidades<span class="glyphicon glyphicon-chevron-down" id="e"></span></a>
-                            <ul>
-                                <li ><a href="php/funcionalidad1.html"><img src="imagenes/añadir.png" class="b">Funcionalidad Nº1</a></li>
-                                <li ><a href="php/funcionalidad2.html"><img src="imagenes/ojo.png" class="b">Funcionalidad Nº2</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <?php require "views/menuNav.view.php" ?>
         <div class="col-sm-6">
 
             <div class="row">

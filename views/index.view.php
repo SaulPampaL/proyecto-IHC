@@ -36,7 +36,7 @@
                             <p><strong>Yañez</strong></p>
                         </div>
                         <div>
-                            <p><a href="cursos/cursoInterfaz.html"><img src="imagenes/curso-online.png" alt=""> INTERFAZ HOMBRE COMPUTADOR - G2</a></p>
+                            <p><a href="<?php echo RUTA; ?>paginas/curso.php"><img src="imagenes/curso-online.png" alt=""> INTERFAZ HOMBRE COMPUTADOR - G2</a></p>
                             <p ><img src="imagenes/ppt.png" alt=""><span> </span>CLASE_01_IHC</p>
                             <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
                         </div>

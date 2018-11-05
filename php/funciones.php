@@ -44,8 +44,8 @@ function obtener_profesoresCurso($conexion, $idCurso){
 
 
 function comprobarSession(){
-	if (!isset($_SESSION['admin'])) {
-		header('Location: ' .  RUTA);
+	if (!isset($_SESSION['nombre'])) {
+		header('Location: ' .  RUTA . 'paginas/login.php');
 	}
 }
 

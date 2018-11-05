@@ -10,6 +10,16 @@ function conexion($bd_config){
 	}
 }
 
+function comprobarDatos($conexion, $correo, $password){
+	$sentencia = $conexion->prepare("SELECT * FROM usuario WHERE correo = :correo AND password = :password");
+	$sentencia->execute(array(
+		':correo' => $correo ,
+		':password' => $password
+	)
+	);
+	return $sentencia->fetchAll();
+
+}
 
 function limpiarDatos($datos){
 	$datos = trim($datos);
@@ -24,12 +34,20 @@ function obtener_idDetalleCurso($conexion, $idUsuario){
 	return $sentencia->fetchAll();
 }
 
+
+
 function obtener_profesoresCurso($conexion, $idCurso){
 	$sentencia = $conexion->prepare("SELECT c.nombre, c.grupo, u.nombre nombreP, u.apellidos, u.foto FROM curso c INNER JOIN detalle_curso d ON (d.idUsuario = 3) and (d.idCurso = c.idCurso) INNER JOIN usuario u ON c.idProfesor = u.idUsuario");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
 }
 
+
+function comprobarSession(){
+	if (!isset($_SESSION['admin'])) {
+		header('Location: ' .  RUTA);
+	}
+}
 
 /*hasta aqui*/
 
@@ -76,10 +94,5 @@ function fecha($fecha){
 	return $fecha;
 }
 
-function comprobarSession(){
-	if (!isset($_SESSION['admin'])) {
-		header('Location: ' .  RUTA);
-	}
-}
 
 ?>

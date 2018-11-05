@@ -1,6 +1,6 @@
 <div class="col-sm-3 well" id="navegacion">
             <div id="perfil">
-                <p><a href="#">Mi Perfilaaa</a></p>
+                <p><a href="#">Mi Perfil</a></p>
                 <img src="<?php echo RUTA; ?>/imagenes/martinluque.png" class="img-circle" height="100" width="120" alt="Avatar">
             </div>
             <div class="menu text-left">

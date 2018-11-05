@@ -13,64 +13,7 @@
                             </div>
                 </div>
             </div>
-            <!-- <div class="row" >
-                <div class="col-sm-12">
-                    <div class="well" style="background: #819ED5">
-                        <div>
-                            <img src="imagenes/pariona.png" class="img-circle" height="100" width="100" alt="Avatar">
-                            <p><strong>Pariona</strong></p>
-                        </div>
-                        <div>
-                            <p><a href="cursos/cursolengcomp.html"><img src="imagenes/curso-online.png" alt=""> LENGUAJES Y COMPILADORES - G3</a></p>
-                            <p ><img src="imagenes/ppt.png" alt=""><span> </span>CLASE_01_LyC</p>
-                            <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="row">
-                <div class="col-sm-12">
-                    <div class="well" style="background: #819ED5">
-                        <div>
-                            <img src="imagenes/yañez.png" class="img-circle" height="100" width="100" alt="Avatar">
-                            <p><strong>Yañez</strong></p>
-                        </div>
-                        <div>
-                            <p><a href="<?php ; ?>paginas/curso.php"><img src="imagenes/curso-online.png" alt=""> INTERFAZ HOMBRE COMPUTADOR - G2</a></p>
-                            <p ><img src="imagenes/ppt.png" alt=""><span> </span>CLASE_01_IHC</p>
-                            <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="row">
-                <div class="col-sm-12">
-                    <div class="well" style="background: #819ED5">
-                        <div>
-                            <img src="imagenes/delgadillo.png" class="img-circle" height="100" width="110" alt="Avatar">
-                            <p><strong>Delgadillo</strong></p>
-                        </div>
-                        <div>
-                            <p><a href="#"><img src="imagenes/curso-online.png" alt=""> INVESTIGACION OPERATIVA II - G2</a></p>
-                            <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="row">
-                <div class="col-sm-12">
-                    <div class="well" style="background: #819ED5">
-                        <div>
-                            <img src="imagenes/bustamante.png" class="img-circle" height="100" width="110" alt="Avatar">
-                            <p><strong>Bustamante</strong></p>
-                        </div>
-                        <div>
-                            <p><a href="#"><img src="imagenes/curso-online.png" alt=""> PROGRAMACION PARALELA - G2</a></p>
-                            <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
             <?php foreach ($cursos as $curso ): ?>
                 
                 <div class="row" >

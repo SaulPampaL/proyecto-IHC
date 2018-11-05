@@ -1,8 +1,11 @@
 <?php session_start();
 
 	require '../admin/config.php';
-	require '../views/blogSitio.view.php';
+	require '../php/funciones.php';
 
 	comprobarSession();
+
+	require '../views/blogSitio.view.php';
+
 
  ?>

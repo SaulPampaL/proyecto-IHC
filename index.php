@@ -5,13 +5,12 @@
 
 	comprobarSession();
 
-	print_r($_SESSION);
 	$conexion = conexion($bd_config);
 	if(!$conexion){
 		header('Location:php/error.php');
 	}
 
-	$cursos = obtener_profesoresCurso($conexion, 3);
+	$cursos = obtener_profesoresCurso($conexion, $_SESSION['id']);
 
 	require 'views/index.view.php';
 	

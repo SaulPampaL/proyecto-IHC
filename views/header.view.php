@@ -21,11 +21,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="<?php echo RUTA; ?>imagenes/logo-fisi-principal.png" class="img-circle" height="30" width="30" alt=""></a>
+            <a class="navbar-brand" href="<?php echo RUTA; ?>"><img src="<?php echo RUTA; ?>imagenes/logo-fisi-principal.png" class="img-circle" height="30" width="30" alt=""></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>InicioMIO</a></li>
+                <li class="active"><a href="<?php echo RUTA; ?>"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-flag"></span> Idioma<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -58,17 +58,17 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Martin Luque<span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre'] . " " . $_SESSION['apellidos']; ?><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Julio Martin Luque Tarrillo</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['nombre'] . " " . $_SESSION['apellidos']; ?></a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-folder-close"></span> Blog</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Calendario</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-folder-close"></span> Mensajes</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+                        <li><a href="<?php echo RUTA; ?>php/cerrar.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Ayuda</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+                <li><a href="<?php echo RUTA; ?>php/cerrar.php"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
             </ul>
         </div>
     </div>
@@ -80,7 +80,7 @@
         <li class="redes-sociales">Redes Sociales</li>
         <img src="<?php echo RUTA; ?>imagenes/internet.png"  style="float: right; margin-top: 35px; margin-right: -120px" alt="">
         <img src="<?php echo RUTA; ?>imagenes/facebook1.png"  style="float: right; margin-top: 35px;margin-right: -80px" alt="">
-        <li><a href="#"><img src="<?php echo RUTA; ?>imagenes/logo-fisi.png" alt="logo-fisi" class="logo-fisi"></a></li>
+        <li><a href="<?php echo RUTA; ?>paginas/inicioSitio.php"><img src="<?php echo RUTA; ?>imagenes/logo-fisi.png" alt="logo-fisi" class="logo-fisi"></a></li>
     </ul>
 
 </div>

@@ -10,18 +10,18 @@
 		$conexion = conexion($bd_config);
 
 		$datos = comprobarDatos($conexion, $correo, $password);
-		print_r($datos);
 		if(!$datos){
 			header('Location:../php/error.php');
 
-		}
+		}	
 
-			$_SESSION['nombre'] = $datos['nombre'];
-			$_SESSION['apellidos'] = $datos['apellidos'];
-			$_SESSION['foto'] = $datos['foto'];
-			$_SESSION['tipo'] = $datos['tipo'];
-			$_SESSION['telefono'] = $datos['telefono'];
+			$_SESSION['nombre'] = $datos[nombre];
+			$_SESSION['apellidos'] = $datos[apellidos];
+			$_SESSION['foto'] = $datos[foto];
+			$_SESSION['tipo'] = $datos[tipo];
+			$_SESSION['telefono'] = $datos[telefono];
 			header('Location:' . RUTA);
+			
 
 	}
 

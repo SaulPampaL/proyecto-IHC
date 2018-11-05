@@ -5,6 +5,7 @@
 
 	comprobarSession();
 
+	print_r($_SESSION);
 	$conexion = conexion($bd_config);
 	if(!$conexion){
 		header('Location:php/error.php');

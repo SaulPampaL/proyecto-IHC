@@ -13,7 +13,7 @@
                             </div>
                 </div>
             </div>
-            <div class="row" >
+            <!-- <div class="row" >
                 <div class="col-sm-12">
                     <div class="well" style="background: #819ED5">
                         <div>
@@ -27,8 +27,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+            </div> -->
+            <!-- <div class="row">
                 <div class="col-sm-12">
                     <div class="well" style="background: #819ED5">
                         <div>
@@ -36,14 +36,14 @@
                             <p><strong>Yañez</strong></p>
                         </div>
                         <div>
-                            <p><a href="<?php echo RUTA; ?>paginas/curso.php"><img src="imagenes/curso-online.png" alt=""> INTERFAZ HOMBRE COMPUTADOR - G2</a></p>
+                            <p><a href="<?php ; ?>paginas/curso.php"><img src="imagenes/curso-online.png" alt=""> INTERFAZ HOMBRE COMPUTADOR - G2</a></p>
                             <p ><img src="imagenes/ppt.png" alt=""><span> </span>CLASE_01_IHC</p>
                             <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+            </div> -->
+            <!-- <div class="row">
                 <div class="col-sm-12">
                     <div class="well" style="background: #819ED5">
                         <div>
@@ -56,8 +56,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
+            </div> -->
+            <!-- <div class="row">
                 <div class="col-sm-12">
                     <div class="well" style="background: #819ED5">
                         <div>
@@ -70,22 +70,25 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row" >
-                <div class="col-sm-12">
-                    <div class="well"  style="background: #819ED5">
-                        <div>
-                            <img src="imagenes/nora.png" class="img-circle" height="100" width="100" alt="Avatar">
-                            <p><strong>Nora</strong></p>
-                        </div>
-                        <div>
-                            <p><a href="#"><img src="imagenes/curso-online.png" alt=""> TALLER DE CONSTRUCCION DE SISTEMAS - G1</a></p>
-                            <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
+            </div> -->
+            <?php foreach ($cursos as $curso ): ?>
+                
+                <div class="row" >
+                    <div class="col-sm-12">
+                        <div class="well"  style="background: #819ED5">
+                            <div>
+                                <img src="<?php echo RUTA;?>imagenes/<?php echo $curso['foto']; ?>" class="img-circle" height="100" width="100" alt="Avatar">
+                                <p><strong>Nora</strong></p>
+                            </div>
+                            <div>
+                                <p><a href="#"><img src="<?php echo RUTA;?>imagenes/curso-online.png" alt=""><?php echo $curso['nombre']; ?> - G<?php echo $curso['grupo']; ?></a></p>
+                                <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach ?>
         </div>
         <div class="col-sm-3 well" style="background: white">
             <div class="thumbnail" style="border: 3px solid #0A337F; -webkit-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);

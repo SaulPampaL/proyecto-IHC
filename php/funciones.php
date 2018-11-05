@@ -18,8 +18,14 @@ function limpiarDatos($datos){
 	return $datos;
 }
 
-function obtener_curso($conexion, $idUsuario){
-	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM curso inner join detalle_curso where (detalle_curso.idUsuario = 1) and (detalle_curso.idCurso = curso.idCurso)");
+function obtener_idDetalleCurso($conexion, $idUsuario){
+	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS *FROM detalle_curso WHERE detalle_curso.idUsuario = $idUsuario");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
+function obtener_profesoresCurso($conexion, $idCurso){
+	$sentencia = $conexion->prepare("SELECT c.nombre, c.grupo, u.nombre nombreP, u.apellidos, u.foto FROM curso c INNER JOIN detalle_curso d ON (d.idUsuario = 3) and (d.idCurso = c.idCurso) INNER JOIN usuario u ON c.idProfesor = u.idUsuario");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
 }

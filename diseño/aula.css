@@ -310,3 +310,17 @@ footer {
 .tamaño-menu{
     margin-bottom: 0px !important;
 }
+
+.tamaño{
+    height: 100%;
+}
+
+.tamaño_panel{
+    margin: 0px !important;
+    padding: 5px !important;
+}
+
+.lugar{
+    margin-top: 0.2em;
+    float: left;
+}

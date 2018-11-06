@@ -10,6 +10,7 @@ function conexion($bd_config){
 	}
 }
 
+/*comprueba datos para el login*/
 function comprobarDatos($conexion, $correo, $password){
 	$sentencia = $conexion->prepare("SELECT * FROM usuario WHERE correo = :correo AND password = :password");
 	$sentencia->execute(array(
@@ -28,16 +29,16 @@ function limpiarDatos($datos){
 	return $datos;
 }
 
-function obtener_idDetalleCurso($conexion, $idUsuario){
+/*function obtener_idDetalleCurso($conexion, $idUsuario){
 	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS *FROM detalle_curso WHERE detalle_curso.idUsuario = $idUsuario");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
-}
+}*/
 
 
 
-function obtener_profesoresCurso($conexion, $idCurso){
-	$sentencia = $conexion->prepare("SELECT c.nombre, c.grupo, u.nombre nombreP, u.apellidos, u.foto FROM curso c INNER JOIN detalle_curso d ON (d.idUsuario = 3) and (d.idCurso = c.idCurso) INNER JOIN usuario u ON c.idProfesor = u.idUsuario");
+function obtener_profesoresCurso($conexion, $idUsuario){
+	$sentencia = $conexion->prepare("SELECT c.idCurso, c.nombre, c.grupo, u.nombre nombreP, u.apellidos, u.foto FROM curso c INNER JOIN detalle_curso d ON (d.idUsuario = $idUsuario) and (d.idCurso = c.idCurso) INNER JOIN usuario u ON c.idProfesor = u.idUsuario");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
 }
@@ -50,19 +51,27 @@ function comprobarSession(){
 	
 }
 
-/*hasta aqui*/
+/*retornar enteros*/
+function id_curso($id){
+	return (int)limpiarDatos($id);
+}
+
+/*obtener las clases de un curso*/
+
+function obtener_clases_por_id($conexion, $idCurso){
+	$resultado = $conexion->query("SELECT * FROM clase WHERE clase.idCurso = $idCurso");
+	$resultado->execute();
+	return $resultado->fetchAll();
+}
+
+/**********hasta aqui************/
+
 
 
 function pagina_actual(){
 	return isset($_GET['p']) ? (int)$_GET['p'] : 1;
 }
 
-function obtener_post($post_por_pagina, $conexion){
-	$inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
-	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio, $post_por_pagina");
-	$sentencia->execute();
-	return $sentencia->fetchAll();
-}
 
 function numero_paginas($post_por_pagina, $conexion){
 	$total_post = $conexion->prepare('SELECT FOUND_ROWS() as total');
@@ -73,14 +82,12 @@ function numero_paginas($post_por_pagina, $conexion){
 	return $numero_paginas;
 }
 
-function id_articulo($id){
-	return (int)limpiarDatos($id);
-}
 
-function obtener_post_por_id($conexion, $id){
-	$resultado = $conexion->query("SELECT * FROM articulos WHERE id = $id LIMIT 1");
-	$resultado = $resultado->fetchAll();
-	return ($resultado) ? $resultado : false;
+function obtener_post($post_por_pagina, $conexion){
+	$inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
+	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio, $post_por_pagina");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
 }
 
 function fecha($fecha){
@@ -93,6 +100,12 @@ function fecha($fecha){
 
 	$fecha = "$dia de " . $meses[$mes] . " del $year";
 	return $fecha;
+}
+
+function obtener_clase_por_id($conexion, $id){
+	$resultado = $conexion->query("SELECT * FROM articulos WHERE id = $id LIMIT 1");
+	$resultado = $resultado->fetchAll();
+	return ($resultado) ? $resultado : false;
 }
 
 

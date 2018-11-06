@@ -11,7 +11,7 @@
 	}
 
 	$cursos = obtener_profesoresCurso($conexion, $_SESSION['id']);
-
+	print_r($cursos);
 	require 'views/index.view.php';
 	
 

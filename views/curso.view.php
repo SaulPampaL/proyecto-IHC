@@ -10,108 +10,25 @@
 
             <div class="row">
                 <div class="col-sm-12" >
+
+                    <?php for ($i = 0 ; $i <17 ; $i++): ?>
+                        
                     <div class="panel panel-primary">
                         <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 1  <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
+                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA <?php echo $i+1; ?> : <?php echo isset($clases[$i]['nombre']) ? $clases[$i]['nombre'] : ""; ?> <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
                         </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 2  <span class="glyphicon glyphicon-calendar" style="float:right"> 22/08/2018</span></p>
+                        <div class="panel-body">
+                            <p>
+                                <?php echo isset($clases[$i]['descripcion']) ? $clases[$i]['descripcion'] : ""; ?>
+                            </p>
                         </div>
-                        <div class="panel-body"></div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="<?php echo RUTA ?>clases/<?php echo $clases[$i]['archivo'] ?>"><img src="" alt=""> <?php echo isset($clases[$i]['archivo']) ? $clases[$i]['archivo'] : ""; ?></a></li>
+                        </ul>
                     </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 3  <span class="glyphicon glyphicon-calendar" style="float:right"> 29/08/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 4  <span class="glyphicon glyphicon-calendar" style="float:right"> 06/09/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 5  <span class="glyphicon glyphicon-calendar" style="float:right"> 13/09/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 6  <span class="glyphicon glyphicon-calendar" style="float:right"> 20/09/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 7  <span class="glyphicon glyphicon-calendar" style="float:right"> 27/09/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 8  <span class="glyphicon glyphicon-calendar" style="float:right"> 04/10/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 9  <span class="glyphicon glyphicon-calendar" style="float:right"> 11/10/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 10  <span class="glyphicon glyphicon-calendar" style="float:right"> 18/10/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 11  <span class="glyphicon glyphicon-calendar" style="float:right"> 25/10/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 12  <span class="glyphicon glyphicon-calendar" style="float:right"> 01/11/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 13  <span class="glyphicon glyphicon-calendar" style="float:right"> 08/11/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 14  <span class="glyphicon glyphicon-calendar" style="float:right"> 15/11/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 15  <span class="glyphicon glyphicon-calendar" style="float:right"> 22/11/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 16  <span class="glyphicon glyphicon-calendar" style="float:right"> 29/11/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA 17  <span class="glyphicon glyphicon-calendar" style="float:right"> 06/12/2018</span></p>
-                        </div>
-                        <div class="panel-body"></div>
-                    </div>
+
+                    <?php endfor ?>
+
                 </div>
             </div>
         </div>

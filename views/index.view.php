@@ -21,11 +21,11 @@
                         <div class="well"  style="background: #819ED5">
                             <div>
                                 <img src="<?php echo RUTA;?>imagenes/<?php echo $curso['foto']; ?>" class="img-circle" height="100" width="100" alt="Avatar">
-                                <p><strong>Nora</strong></p>
+                                <p><strong><?php echo $curso['nombreP']; ?></strong></p>
                             </div>
                             <div>
                                 <p><a href="#"><img src="<?php echo RUTA;?>imagenes/curso-online.png" alt=""><?php echo $curso['nombre']; ?> - G<?php echo $curso['grupo']; ?></a></p>
-                                <p ><img src="imagenes/tarea.png" alt=""><span> </span>Tarea Pendiente</p>
+                                <p ><img src="imagenes/tarea.png" alt=""><span> </span>MODIFICARRRRRTarea Pendiente</p>
 
                             </div>
                         </div>

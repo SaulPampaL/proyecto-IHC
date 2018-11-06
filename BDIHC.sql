@@ -111,16 +111,16 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `telefono` int(11) DEFAULT NULL,
   `foto` varchar(50) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
-  `contraseña` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table inthc.usuario: ~3 rows (approximately)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`idUsuario`, `nombre`, `apellidos`, `codigo`, `correo`, `telefono`, `foto`, `tipo`, `contraseña`) VALUES
+INSERT INTO `usuario` (`idUsuario`, `nombre`, `apellidos`, `codigo`, `correo`, `telefono`, `foto`, `tipo`, `password`) VALUES
 	(1, 'profesor1', 'Profesor1', '000001', 'profesor1@unmsm.edu.pe', 999999001, 'delgadillo.png', 'profesor', '1111'),
 	(2, 'profesor2', 'Profesor2', '000002', 'profesor2@unmsm.edu.pe', 999999002, 'pariona.png', 'profesor', '2222'),
-	(3, 'alumno1', 'Alumno1', '100001', 'alumno1@unmsm.edu.pe', 999999003, 'martin.jpg', 'alumno', '1111');
+	(3, 'Martin', 'Luque', '100001', 'alumno1@unmsm.edu.pe', 999999003, 'martinluque.png', 'alumno', '1111');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

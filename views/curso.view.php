@@ -12,20 +12,55 @@
                 <div class="col-sm-12" >
 
                     <?php for ($i = 0 ; $i <17 ; $i++): ?>
+
+                        <?php $encontrado = FALSE; ?>
                         
-                    <div class="panel panel-primary">
-                        <div class="panel-heading text-left">
-                            <p><span class="glyphicon glyphicon-pencil"></span> SEMANA <?php echo $i+1; ?> : <?php echo isset($clases[$i]['nombre']) ? $clases[$i]['nombre'] : ""; ?> <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <?php echo isset($clases[$i]['descripcion']) ? $clases[$i]['descripcion'] : ""; ?>
-                            </p>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="<?php echo RUTA ?>clases/<?php echo $clases[$i]['archivo'] ?>"><img src="" alt=""> <?php echo isset($clases[$i]['archivo']) ? $clases[$i]['archivo'] : ""; ?></a></li>
-                        </ul>
-                    </div>
+
+
+                        <?php foreach ($clases as $clase): ?>
+                            
+                            <?php if (($i+1) == $clase['semana']): ?>
+
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading text-left">
+                                        <p><span class="glyphicon glyphicon-pencil"></span> SEMANA <?php echo $i+1; ?> : <?php echo isset($clase['nombre']) ? $clase['nombre'] : ""; ?> <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            <?php echo isset($clase['descripcion']) ? $clase['descripcion'] : ""; ?>
+                                        </p>
+                                    </div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="<?php echo RUTA ?>clases/<?php echo $clase['archivo'] ?>"><img src="" alt=""> <?php echo isset($clase['archivo']) ? $clase['archivo'] : ""; ?></a></li>
+                                    </ul>
+                                </div>
+
+                                <?php $encontrado = true; ?>
+                                    
+            
+                            <?php endif ?>  
+                            
+                        <?php endforeach ?>
+
+                            <?php if ($encontrado==false): ?>
+                                
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading text-left">
+                                        <p><span class="glyphicon glyphicon-pencil"></span> SEMANA <?php echo $i+1; ?> :  <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#"><img src="" alt=""> </a></li>
+                                    </ul>
+                                </div> 
+
+                            <?php endif ?>
+
+                        
 
                     <?php endfor ?>
 

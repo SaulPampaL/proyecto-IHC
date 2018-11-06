@@ -28,13 +28,14 @@ CREATE TABLE IF NOT EXISTS `clase` (
   PRIMARY KEY (`idClase`),
   KEY `FK_clase_curso` (`idCurso`),
   CONSTRAINT `FK_clase_curso` FOREIGN KEY (`idCurso`) REFERENCES `curso` (`idCurso`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table inthc.clase: ~2 rows (approximately)
 /*!40000 ALTER TABLE `clase` DISABLE KEYS */;
 INSERT INTO `clase` (`idClase`, `idCurso`, `semana`, `nombre`, `descripcion`, `fecha_subida`, `archivo`) VALUES
 	(1, 1, 1, 'clase1', 'descripcion clase 1', '2018-11-03', 'clase1.pdf'),
-	(2, 1, 2, 'clase2', 'descripcion clase 2', '2018-11-03', 'direccion2.pdf');
+	(2, 1, 2, 'clase2', 'descripcion clase 2', '2018-11-03', 'direccion2.pdf'),
+	(3, 2, 2, 'clase2', 'descripcion de lenguajes', '2018-11-06', 'clased2');
 /*!40000 ALTER TABLE `clase` ENABLE KEYS */;
 
 -- Dumping structure for table inthc.curso

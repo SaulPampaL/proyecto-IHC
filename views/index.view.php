@@ -24,7 +24,7 @@
                                 <p><strong><?php echo $curso['nombreP']; ?></strong></p>
                             </div>
                             <div>
-                                <p><a href="#"><img src="<?php echo RUTA;?>imagenes/curso-online.png" alt=""><?php echo $curso['nombre']; ?> - G<?php echo $curso['grupo']; ?></a></p>
+                                <p><a href="<?php echo RUTA;?>paginas/curso.php?id=<?php echo $curso['idCurso']; ?>"><img src="<?php echo RUTA;?>imagenes/curso-online.png" alt=""><?php echo $curso['nombre']; ?> - G<?php echo $curso['grupo']; ?></a></p>
                                 <p ><img src="imagenes/tarea.png" alt=""><span> </span>MODIFICARRRRRTarea Pendiente</p>
 
                             </div>

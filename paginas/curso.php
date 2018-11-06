@@ -17,6 +17,7 @@
 	}
 	/*PENSAR PONER CUADNO NO EXISTE EL ID*/
 	$clases = obtener_clases_por_id($conexion, $id_curso);
+	print_r($clases);
 
 
 	require "../views/curso.view.php";

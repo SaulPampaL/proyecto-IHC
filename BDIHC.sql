@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `clase` (
 -- Dumping data for table inthc.clase: ~2 rows (approximately)
 /*!40000 ALTER TABLE `clase` DISABLE KEYS */;
 INSERT INTO `clase` (`idClase`, `idCurso`, `semana`, `nombre`, `descripcion`, `fecha_subida`, `archivo`) VALUES
-	(1, 1, 1, 'clase1', 'descripcion clase 1', '2018-11-03', 'direccion1.pdf'),
+	(1, 1, 1, 'clase1', 'descripcion clase 1', '2018-11-03', 'clase1.pdf'),
 	(2, 1, 2, 'clase2', 'descripcion clase 2', '2018-11-03', 'direccion2.pdf');
 /*!40000 ALTER TABLE `clase` ENABLE KEYS */;
 

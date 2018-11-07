@@ -64,6 +64,13 @@ function obtener_clases_por_id($conexion, $idCurso){
 	return $resultado->fetchAll();
 }
 
+function ingresar_clase($conexion, $clase){
+
+	$sentencia = $conexion->prepare("INSERT INTO clase (idCurso, semana, nombre, descripcion, fecha_subida, archivo) VALUES (:idCurso, :semana, :nombreClase, :descripcion, CURDATE(), :archivo)");
+	
+	$sentencia->execute($clase);
+}
+
 /**********hasta aqui************/
 
 

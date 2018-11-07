@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-12" >
                             <div class="alert alert-success fade in text-left">
-                                <p><strong><span class="glyphicon glyphicon-user"></span> Martin Luque!</strong></p>
+                                <p><strong><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['nombre'] . " " . $_SESSION['apellidos']; ?></strong></p>
                                 Bienvenido al Aula Virtual.
                             </div>
                 </div>

@@ -1,6 +1,6 @@
 <?php 
 
-	define('RUTA', 'http://localhost/projectos%20web%20git/Proyecto_INTERFAZ_HC/');
+	define('RUTA', 'http://localhost/projectos%20web%20git/Proyecto-IHC/');
 	
 	$bd_config = array(
 		'basedatos' => 'inthc',

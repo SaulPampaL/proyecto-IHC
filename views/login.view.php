@@ -11,10 +11,15 @@
 	  <div class="layer"></div>
 	  <div class="container">
 	    <div class="login-form">
-	      <h1>Login</h1>
+				<h1>Login</h1>
+				<?php if(isset($mensaje)){
+				echo $mensaje;	}
+				?>
+				<br>
+				<br>
 	      <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" >
-	        <input type="text" name="correo" placeholder="correo">
-	        <input type="password" name="password" placeholder="password">
+	        <input type="text" name="correo" placeholder="correo" required>
+	        <input type="password" name="password" placeholder="password" required>
 	        <input type="submit" name="" value="Iniciar Sesion">
 	      </form>
 	    </div>

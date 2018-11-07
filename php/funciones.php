@@ -51,6 +51,14 @@ function comprobarSession(){
 	
 }
 
+/*obtenrer cursos que enseñan los profesores*/
+function obtener_curso_de_Profesores($conexion, $id){
+
+	$sentencia = $conexion->prepare("SELECT c.idCurso, c.nombre FROM curso c WHERE idProfesor = $id");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
 /*retornar enteros*/
 function id_curso($id){
 	return (int)limpiarDatos($id);

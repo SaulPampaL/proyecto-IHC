@@ -12,13 +12,14 @@
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 		$curso = limpiarDatos($_POST['curso']);
+		echo $curso;
 		$semana = $_POST['semana'];
 		$nombreClase = limpiarDatos($_POST['nombreClase']);
 		$descripcion = $_POST['descripcion'];
 
 	
 		$clase = array(
-			':idCurso' => 1,	/*falta agregar id de los cursos*/
+			':idCurso' => $curso,	/*falta agregar id de los cursos*/
 			':semana' => $semana, 
 			':nombreClase' => $nombreClase,	
 			':descripcion' => $descripcion, 
@@ -30,8 +31,10 @@
 		$archivo_subido = $carpeta_destino . $_FILES['archivo']['name'];
 		move_uploaded_file($_FILES['archivo']['tmp_name'], $archivo_subido);
 
-
 	}
+
+
+	$cursosDP = obtener_curso_de_Profesores($conexion, $_SESSION['id']);
 
 
 	require '../views/agregarClase.view.php';

@@ -24,7 +24,7 @@
                         <li class="submenu"><a href="#"><img src="<?php echo RUTA; ?>imagenes/icon-nuevo.png" class="b">Funcionalidades<span class="glyphicon glyphicon-chevron-down" id="e"></span></a>
                             <ul>
                                 <li ><a href="<?php echo RUTA; ?>paginas/agregarClase.php"><img src="<?php echo RUTA; ?>imagenes/añadir.png" class="b"><?php if($_SESSION['tipo']=='profesor'){echo "Agregar Clase";}else{ echo "Ver Clase";} ?></a></li>
-                                <li ><a href="../php/funcionalidad2.html"><img src="<?php echo RUTA; ?>imagenes/ojo.png" class="b">Funcionalidad Nº2</a></li>
+                                <li ><a href="<?php echo RUTA; ?>paginas/agregarTarea.php"><img src="<?php echo RUTA; ?>imagenes/añadir.png" class="b"><?php if($_SESSION['tipo']=='profesor'){echo "Agregar Tarea";}else{ echo "Ver Tarea";} ?></a></li>
                             </ul>
                         </li>
                     </ul>

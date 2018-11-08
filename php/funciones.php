@@ -79,6 +79,20 @@ function ingresar_clase($conexion, $clase){
 	$sentencia->execute($clase);
 }
 
+/*obtener alumnos del curso*/
+function obtener_alumnos_del_curso($conexion ,$idCurso ){
+	$sentencia = $conexion->prepare("SELECT * FROM detalle_curso d WHERE d.idcurso = $idCurso");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
+function ingresar_tarea($conexion, $valores){
+
+	$sentencia = $conexion->prepare("INSERT INTO tarea (idDetalle_curso, nombre, descripcion, archivoP, estado, fecha_subida, fecha_limite) VALUES (:idDetalle_curso, :nombreTarea, :descripcion, :archivo, :estado, :fecha_actual, :fecha_limite)" );
+	$sentencia->execute($valores);
+
+}
+
 /**********hasta aqui************/
 
 

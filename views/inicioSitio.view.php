@@ -18,23 +18,20 @@
             </div>
             <div class="row" >
                 <div class="col-sm-12">
-                    <div class="well" style="background: white; ">
+                    <div class="well" style="background: #f7f7f7; ">
                        <div class="sitio">
                             <div style="float: left">
                                 <p ><img src="../imagenes/logo-fisi.png" class="img-circle" height="100" width="400" alt="Avatar"></p>
                             </div>
                             <div class="mensaje">
-                            <div>
-                                <p>Mision</p>
-                                <p>asdasdsa dsadasdsadsa dasdasdsadsadasd<br>
-                                dasdsadsadasdasdsadsadsadsadsadsadsadsad <br>
-                                dasdasdasdasddddasdasdasdasdsadasdasdasdas</p>
-                            </div>
-                            <div>
-                                <p>Vision</p>
-                                <p>sdasdasdadasdas sadasdasdsad sa asd asdas
-                                dasdsadasdassadas  asdasdasda as asdasd as</p>
-                            </div>
+                                <div class="col-sm-6">
+                                    <p><h2>Misión</h2></p>
+                                    <p>Somos una Facultad formadora de profesionales en las ingenierías de Sistemas y de Software, así como en Gestión y Gobierno de Tecnologías de Información, contribuyendo al desarrollo de la sociedad.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p><h2>Visión</h2></p>
+                                    <p>Ser una Facultad referente de excelencia y calidad en la formación profesional e investigación en las ingenierías de Sistemas, de Software y de Ciencias de la Computación, reconocida nacional e internacionalmente, que aporta el desarrollo sostenible y tecnológico del país.</p>
+                                </div>
                             </div>
                             <div class="videos">
                                 <img src="../imagenes/foto-fisi.jpg" class="img-responsive" height="400" width="780" alt="Cinque Terre">

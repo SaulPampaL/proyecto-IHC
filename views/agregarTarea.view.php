@@ -85,12 +85,24 @@
                                         </div>
                                         <div class="col-md-9 inputGroupContainer">
                                             <input type="file" id="ejemplo_archivo_1" name="archivo">
-                                            <p class="help-block">Ejemplo de texto de ayuda.</p>
+                                            
                                         </div>
                                      </div>
                                 </div>
 
                               <button type="submit" class="btn btn-default">Subir Tarea</button>
+
+                              <?php if (!isset($mensaje)): ?>
+                                    
+                                    <div class="alert alert-success" style="margin-top: 5px;">
+                                        <p>
+                                            <?php
+                                                echo "<strong class='text-success'>" . $mensaje . "</strong>";
+                                            ?>
+                                        </p>
+                                    </div>
+
+                                <?php endif ?>
                             </form>
                         </div>
                     </div> 

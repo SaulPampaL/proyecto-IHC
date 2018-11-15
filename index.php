@@ -12,7 +12,7 @@
 
 	$cursos = obtener_profesoresCurso($conexion, $_SESSION['id']);
 
-	print_r($_SESSION);
+	/*print_r($_SESSION);*/
 
 	require 'views/index.view.php';
 	

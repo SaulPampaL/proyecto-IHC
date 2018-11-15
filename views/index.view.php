@@ -14,7 +14,7 @@
                 </div>
             </div>
             
-            <?php foreach ($cursos as $curso ): ?>
+            <?php foreach ($cursos as $curso): ?>
                 
                 <div class="row" >
                     <div class="col-sm-12">
@@ -32,11 +32,10 @@
                     </div>
                 </div>
             <?php endforeach ?>
+
         </div>
         <div class="col-sm-3 well" style="background: white">
-            <div class="thumbnail" style="border: 3px solid #0A337F; -webkit-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
--moz-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);">
+            <div class="sombra thumbnail" >
                 <p><a href="#"><img src="imagenes/agenda.png" alt=""></a></p>
                 <p class="agenda bg-primary"><a href="">Agenda</a></p>
                 <hr style="background: #0A337F; height: 3px ; margin: 0px">
@@ -183,9 +182,7 @@ box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);">
                     <button style="margin-left: 130px; margin-top: 10px" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right"></span> Ver Mas</button>
                 </div>
             </div>
-            <div class="well" style="border: 2px solid #0A337F; -webkit-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
--moz-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);">
+            <div class="sombra well" >
                 <p><span class="glyphicon glyphicon-hdd"></span> BIBLIOTECA VIRTUAL</p>
                 <p><img src="imagenes/biblio-virtual.png" alt=""></p>
                 <ul class="biblioteca">
@@ -198,9 +195,7 @@ box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);">
             </div>
 
 
-            <div class="well" style="border: 2px solid #0A337F; -webkit-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
--moz-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);">
+            <div class="sombra well" >
                 <p><span class="glyphicon glyphicon-globe " ></span> USUARIOS EN LINEA</p>
                 <div class="text-left">
                     <p><span class="glyphicon glyphicon-user"></span> Luque Tarrillo Julio  <span class="glyphicon glyphicon-comment" style="float: right"></span></p>

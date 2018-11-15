@@ -12,8 +12,9 @@
                     <div class="well" style="background: white; ">
                         
                         <div class="container">
+                        
                             <legend class="text-primary" style="float: top center;"><h3 style="margin-top: 10px;">AGREGAR CLASE</h3></legend>
-                            <form role="form" method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                            <form role="form" method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" action="agregarClase.view.php">
                                 
                                 <div class="input row" >
                                     <div class="form-group"> 
@@ -84,12 +85,24 @@
                                         </div>
                                         <div class="col-md-9 inputGroupContainer">
                                             <input type="file" id="ejemplo_archivo_1" name="archivo">
-                                            <p class="help-block">Ejemplo de texto de ayuda.</p>
+                                            
                                         </div>
                                      </div>
                                 </div>
+                        
+                              <button type="submit" class="btn btn-default" data-toggle="modal" name="submit">Subir Clase</button>
+                                <?php if (!isset($mensaje)): ?>
+                                    
+                                    <div class="alert alert-success" style="margin-top: 5px;">
+                                        <p>
+                                            <?php
+                                            echo "<strong class='text-success'>" . $mensaje . "</strong>";
+                                            ?>
+                                        </p>
+                                    </div>
 
-                              <button type="submit" class="btn btn-default">Subir Clase</button>
+                                <?php endif ?>
+
                             </form>
                         </div>
                     </div> 

@@ -9,6 +9,8 @@
 	if(!$conexion){
 		header('Location: ../php/error.php');
 	}
+	
+	$mensaje="";
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 	
@@ -22,7 +24,9 @@
 		/*print_r($curso);*/
 
 		$alumnos = obtener_alumnos_del_curso($conexion, $curso['idCurso']);
+		
 		$valores = "";
+		
 
 		foreach ($alumnos as $alumno) {
 
@@ -37,7 +41,7 @@
 			);
 
 			ingresar_tarea($conexion, $valores);	
-
+			$mensaje="Tarea subida con exito";
 		};
 
 		
@@ -51,7 +55,7 @@
 	$cursosDP = obtener_curso_de_Profesores($conexion, $_SESSION['id']);
 
 
-	require '../views/agregarTarea.view.php';
+	include_once '../views/agregarTarea.view.php';
 
 
  ?>

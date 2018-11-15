@@ -10,6 +10,8 @@
 		header('Location: ../php/error.php');
 	}
 
+	$mensaje="";
+
 	if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 		$curso = limpiarDatos($_POST['curso']);
 		echo $curso;
@@ -30,6 +32,7 @@
 		$carpeta_destino = '../clases/';
 		$archivo_subido = $carpeta_destino . $_FILES['archivo']['name'];
 		move_uploaded_file($_FILES['archivo']['tmp_name'], $archivo_subido);
+		$mensaje="Clase subida con exito";	
 
 	}
 
@@ -37,7 +40,7 @@
 	$cursosDP = obtener_curso_de_Profesores($conexion, $_SESSION['id']);
 
 
-	require '../views/agregarClase.view.php';
+	include_once '../views/agregarClase.view.php';
 
 
  ?>

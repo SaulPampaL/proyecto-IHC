@@ -9,7 +9,7 @@
         <div class="col-sm-9">
 
             <div class="row">
-                <div class="col-sm-12" >
+                <div class="col-sm-11" >
 
                     <?php for ($i = 0 ; $i <17 ; $i++): ?>
 
@@ -21,7 +21,7 @@
                             
                             <?php if (($i+1) == $clase['semana']): ?>
 
-                                <div class="panel panel-primary">
+                                <div class="panel panel-primary" id="<?php echo $i+1; ?>">
                                     <div class="panel-heading text-left">
                                         <p><span class="glyphicon glyphicon-pencil"></span> SEMANA <?php echo $i+1; ?> : <?php echo isset($clase['nombre']) ? $clase['nombre'] : ""; ?> <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
                                     </div>
@@ -44,7 +44,7 @@
 
                             <?php if ($encontrado==false): ?>
                                 
-                                <div class="panel panel-primary">
+                                <div class="panel panel-primary" id="<?php echo $i+1; ?>">
                                     <div class="panel-heading text-left">
                                         <p><span class="glyphicon glyphicon-pencil"></span> SEMANA <?php echo $i+1; ?> :  <span class="glyphicon glyphicon-calendar" style="float:right"> 15/08/2018</span></p>
                                     </div>
@@ -64,6 +64,28 @@
 
                     <?php endfor ?>
 
+                </div>
+                <div class="col-sm-1 lista-semana" >
+                    <ul class="list-group">
+                        <h4 class="titulo">Semana</h4>
+                        <a href="#" class="list-group-item item-semana">1</a>
+                        <a href="#1" class="list-group-item item-semana">2</a>
+                        <a href="#2" class="list-group-item item-semana">3</a>
+                        <a href="#3" class="list-group-item item-semana">4</a>
+                        <a href="#4" class="list-group-item item-semana">5</a>
+                        <a href="#5" class="list-group-item item-semana">6</a>
+                        <a href="#6" class="list-group-item item-semana">7</a>
+                        <a href="#7" class="list-group-item item-semana">8</a>
+                        <a href="#8" class="list-group-item item-semana">9</a>
+                        <a href="#9" class="list-group-item item-semana">10</a>
+                        <a href="#10" class="list-group-item item-semana">11</a>
+                        <a href="#11" class="list-group-item item-semana">12</a>
+                        <a href="#12" class="list-group-item item-semana">13</a>
+                        <a href="#13" class="list-group-item item-semana">14</a>
+                        <a href="#14" class="list-group-item item-semana">15</a>
+                        <a href="#15" class="list-group-item item-semana">16</a>
+                        <a href="#16" class="list-group-item item-semana">17</a>
+                    </ul>
                 </div>
             </div>
         </div>

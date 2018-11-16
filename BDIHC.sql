@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `clase` (
   CONSTRAINT `FK_clase_curso` FOREIGN KEY (`idCurso`) REFERENCES `curso` (`idCurso`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
--- Dumping data for table inthc.clase: ~6 rows (approximately)
+-- Dumping data for table inthc.clase: ~17 rows (approximately)
 /*!40000 ALTER TABLE `clase` DISABLE KEYS */;
 INSERT INTO `clase` (`idClase`, `idCurso`, `semana`, `nombre`, `descripcion`, `fecha_subida`, `archivo`) VALUES
 	(1, 1, 1, 'clase1', 'descripcion clase 1', '2018-11-03', 'clase1.pdf'),
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `tarea` (
 -- Dumping data for table inthc.tarea: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tarea` DISABLE KEYS */;
 INSERT INTO `tarea` (`idTarea`, `idDetalle_curso`, `nombre`, `descripcion`, `archivoP`, `archivoA`, `estado`, `fecha_subida`, `fecha_entrega`, `fecha_limite`) VALUES
-	(1, 1, 'tarea1', 'descripcion tarea1', NULL, NULL, NULL, '2018-11-07', '2018-11-07', '2018-12-07'),
+	(1, 1, 'tarea1', 'descripcion tarea1', NULL, NULL, 'falta', '2018-11-07', '2018-11-07', '2018-12-07'),
 	(2, 3, 'tarea2', 'descripcion tarea 2', NULL, NULL, NULL, '2018-11-07', '2018-11-07', '2018-12-07'),
 	(7, 5, 'asdasd', 'asdasd', 'document(1).pdf', NULL, 'falta', '2018-11-08', NULL, '2018-11-08'),
 	(8, 4, 'asdasd', 'asdasd', 'document(1).pdf', NULL, 'falta', '2018-11-08', NULL, '2018-11-08'),

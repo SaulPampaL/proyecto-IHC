@@ -93,6 +93,18 @@ function ingresar_tarea($conexion, $valores){
 
 }
 
+function obtener_tarea_por_id($conexion, $id, $curso){
+
+	$sentencia = $conexion->prepare("SELECT t.nombre, t.descripcion, t.estado, t.archivoP, t.fecha_subida, t.fecha_limite FROM tarea t INNER JOIN detalle_curso d ON (t.idDetalle_curso = d.idDetalle_curso) AND (d.idUsuario = :idUsuario) AND (d.idCurso = :idCurso)");
+
+	$sentencia->execute(array(
+						":idUsuario" => $id ,
+						":idCurso" => $curso
+				)
+	);
+	return $sentencia->fetchAll();
+}
+
 /**********hasta aqui************/
 
 
